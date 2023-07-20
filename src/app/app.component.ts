@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Firestore } from '@angular/fire/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Todo';
+  description = '';
+
+
+  constructor(private firestore: Firestore) {
+
+  }
+
+  addUser() {
+
+  }
+
 }

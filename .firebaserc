@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todo-bi89": {
+      "hosting": {
+        "Todo": [
+          "todo-bi89"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todo-bi89"
+  }
+}
