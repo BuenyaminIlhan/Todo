@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection } from '@angular/fire/firestore';
 
 
 @Component({
@@ -8,16 +8,17 @@ import { Firestore } from '@angular/fire/firestore';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Todo';
-  description = '';
 
 
-  constructor(private firestore: Firestore) {
+  constructor(private firestore: Firestore) { }
 
+  todos = {
+    title: '',
+    description: ''
   }
 
   addUser() {
-
+    const todoCollection = collection(this.firestore, 'todos')
+    addDoc(todoCollection, this.todos);
   }
-
 }

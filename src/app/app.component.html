@@ -1,10 +1,14 @@
 <h1>Todo</h1>
-<div><form (ngSubmit)="addUser()"></form>
-    <label for="title">Title:</label>
-    <input type="text" id="title" [(ngModel)]="title">
-  </div>
+<form (ngSubmit)="addUser()">
   <div>
-    <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="description"></textarea>
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="todos.title" name="title" required="">
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input id="description" [(ngModel)]="todos.description" name="description" required="">
+    </div>
+    <button type="submit">Add</button>
   </div>
-  <button type="submit">Add</button>
+</form>
